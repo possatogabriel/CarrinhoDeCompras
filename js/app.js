@@ -32,7 +32,7 @@ function adicionarItem() {
     // ESTRUTURA DE CONDIÇÃO QUE NÃO PERMITE ADIÇÃO DOS ITENS AO CARRINHO SEM INSERIR VALOR DA "QUANTIDADE"
     if (isNaN(quantidade) || quantidade <= 0) {
         alert('Insira uma QUANTIDADE válida!');
-        return;
+        limparCarrinho();
     }
 
     // VARIÁVEL QUE MOSTRA O VALOR TOTAL DAS COMPRAS
