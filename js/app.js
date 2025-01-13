@@ -30,9 +30,9 @@ function adicionarItem() {
     listaCarrinho.innerHTML = listaCarrinho.innerHTML + `<section class="carrinho__produtos__produto"> <span class="texto-azul"> ${quantidade}x </span> ${nomeProduto} <span class="texto-azul"> R$${valorProdutoFinal} </span> </section>`;
 
     // ESTRUTURA DE CONDIÇÃO QUE NÃO PERMITE ADIÇÃO DOS ITENS AO CARRINHO SEM INSERIR VALOR DA "QUANTIDADE"
-    if (quantidade.valueOf = '0') {
-        alert ("Insira a QUANTIDADE do item desejado!");
-        limparCarrinho();
+    if (isNaN(quantidade) || quantidade <= 0) {
+        alert('Insira uma QUANTIDADE válida!');
+        return;
     }
 
     // VARIÁVEL QUE MOSTRA O VALOR TOTAL DAS COMPRAS
